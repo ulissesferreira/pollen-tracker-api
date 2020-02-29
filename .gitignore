@@ -1,3 +1,9 @@
+build
+
+#################################
+# Default Node .gitignore below #
+#################################
+
 # Logs
 logs
 *.log

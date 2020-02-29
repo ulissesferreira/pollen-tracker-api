@@ -1,0 +1,22 @@
+{
+  "name": "pollen-tracker-api",
+  "version": "1.0.0",
+  "description": "🌲 Backend for the pollen tracker interface. Scraps data from the official Portuguese Aerobiology website.",
+  "main": "src/app.ts",
+  "repository": "https://github.com/ulissesferreira/pollen-tracker-api.git",
+  "author": "Ulisses Ferreira <ulissesvf@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./build/app.js",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/app.ts",
+    "prod": "tsc && node ./build/app.js"
+  },
+  "dependencies": {
+    "fastify": "^2.12.1"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  }
+}

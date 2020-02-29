@@ -1,0 +1,34 @@
+// {
+//   "compilerOptions": {
+//     "target": "es2018",
+//     "module": "commonjs",
+//     "lib": ["es2019", "es2020.string"],
+//     "outDir": "./build",
+//     "strict": true,
+//     "noImplicitAny": false,
+//     "typeRoots": [],
+//     "esModuleInterop": true
+//   }
+// }
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es6",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "build",
+      "baseUrl": ".",
+      "paths": {
+          "*": [
+              "node_modules/*",
+              "src/types/*"
+          ]
+      }
+  },
+  "include": [
+      "src/**/*"
+  ]
+}

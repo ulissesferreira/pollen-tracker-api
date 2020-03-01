@@ -47,7 +47,7 @@ export class PollenParser {
       .split('com predomínio dos pólenes')[1]
       .split('.')[0]
   
-    const pollens = this.getDataPollens(POLLENS_LIST, pollensString)
+    const pollens = this.getPollensFromData(POLLENS_LIST, pollensString)
   
     return {
       level,
@@ -59,7 +59,7 @@ export class PollenParser {
   ** Returns true if the data string parameter has the pollen
   ** name in it.
   */
-  getDataPollens(pollensList: string[], data: string): string[] {
+  getPollensFromData(pollensList: string[], data: string): string[] {
 
     let presentPollens: string[] = pollensList.filter((pollen) => {
       return data.includes(pollen.toLowerCase())

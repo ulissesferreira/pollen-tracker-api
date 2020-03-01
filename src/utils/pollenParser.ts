@@ -36,11 +36,12 @@ export class PollenParser {
   */
   parseHTML(inputHTML: string): PollenData {
     const $: CheerioStatic = cheerio.load(inputHTML, { decodeEntities: false })
-    const level: string = $('.previsao-text')
+    const rawLevel: string = $('.previsao-text')
       .text()
       .trim()
       .split('os pólenes encontram-se em níveis ')[1]
       .split(',')[0]
+    const level = rawLevel.charAt(0).toUpperCase() + rawLevel.slice(1);
     const pollensString: string = $('.previsao-text')
       .text()
       .trim()

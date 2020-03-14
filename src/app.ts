@@ -1,6 +1,7 @@
 import { PollenParser, PollenData } from './utils/pollenParser'
-
 const pollenParser: any = new PollenParser()
+
+require('dotenv').config()
 
 const fastify = require('fastify')({ logger: true })
 
@@ -15,7 +16,7 @@ fastify.get('/', async (request: any, reply: any) => {
 
 const start = async () => {
   try {
-    await fastify.listen(3000)
+    await fastify.listen(process.env.PORT)
     fastify.log.info(`server listening on ${fastify.server.address().port}`)
   } catch (err) {
     fastify.log.error(err)

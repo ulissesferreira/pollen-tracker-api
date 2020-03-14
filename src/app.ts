@@ -1,9 +1,12 @@
-import fetch from 'node-fetch'
 import { PollenParser, PollenData } from './utils/pollenParser'
 
 const pollenParser: any = new PollenParser()
 
 const fastify = require('fastify')({ logger: true })
+
+fastify.register(require('fastify-cors'), {
+  origin: '*'
+})
 
 fastify.get('/', async (request: any, reply: any) => {
   const data: PollenData = pollenParser.getPollenData();

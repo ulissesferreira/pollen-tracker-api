@@ -47,7 +47,6 @@ export class PollenParser {
   constructor() {
     const startTime = new Date()
     const lastUpdated = `${startTime.getFullYear()}${startTime.getMonth()}${startTime.getDate()}`
-    console.log(`Last Update ${lastUpdated}`)
 
     this.data = null
     this.lastUpdated = lastUpdated

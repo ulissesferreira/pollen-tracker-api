@@ -6,10 +6,7 @@ const pollenParser: any = new PollenParser()
 const fastify = require('fastify')({ logger: true })
 
 fastify.get('/', async (request: any, reply: any) => {
-  const response = await fetch('https://www.rpaerobiologia.com/previsao-polinica/lisboa')
-  const rawHTML: string = await response.text()
-
-  const data: PollenData = pollenParser.parseHTML(rawHTML)
+  const data: PollenData = pollenParser.getPollenData();
   return data
 })
 
